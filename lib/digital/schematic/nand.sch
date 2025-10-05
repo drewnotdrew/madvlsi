@@ -86,7 +86,7 @@ C {ipin.sym} 40 -130 0 0 {name=p4 lab=A}
 C {opin.sym} 225 -195 0 0 {name=p8 lab=Y}
 C {lab_pin.sym} 35 -245 0 0 {name=p6 sig_type=std_logic lab=A}
 C {lab_pin.sym} 235 -245 2 0 {name=p9 sig_type=std_logic lab=B}
-C {lab_pin.sym} 105 -155 0 0 {name=p1 sig_type=std_logic lab=A}
-C {lab_pin.sym} 105 -95 0 0 {name=p7 sig_type=std_logic lab=B}
+C {lab_pin.sym} 105 -95 0 0 {name=p1 sig_type=std_logic lab=A}
+C {lab_pin.sym} 105 -155 0 0 {name=p7 sig_type=std_logic lab=B}
 C {lab_pin.sym} 40 -105 2 0 {name=p10 sig_type=std_logic lab=B}
 C {lab_pin.sym} 40 -130 2 0 {name=p11 sig_type=std_logic lab=A}
