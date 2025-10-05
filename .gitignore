@@ -1,0 +1,12 @@
+# python
+.python-version
+*.xmp
+
+# latex
+*.log
+*.aux
+svg-inkscape/
+*/report/*.out
+
+# magic
+*.ext
