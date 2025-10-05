@@ -1,0 +1,14 @@
+# python
+.python-version
+*.xmp
+*.egg-info/
+__pycache__/
+
+# latex
+*.log
+*.aux
+svg-inkscape/
+*/report/*.out
+
+# magic
+*.ext
