@@ -1,0 +1,7 @@
+[project]
+name = "madvlsi"
+version = "0.1.0"
+description = "Mixed analog-digital VLSI course projects"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
