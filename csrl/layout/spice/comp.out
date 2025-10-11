@@ -1,0 +1,50 @@
+
+Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+Flattening unmatched subcell csrl in circuit csrl_edge (1)(1 instance)
+Flattening unmatched subcell csrl_n in circuit csrl_edge (1)(1 instance)
+
+Subcircuit summary:
+Circuit 1: csrl_edge                       |Circuit 2: csrl_edge                       
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__pfet_01v8 (7)                |sky130_fd_pr__pfet_01v8 (7)                
+sky130_fd_pr__nfet_01v8 (7)                |sky130_fd_pr__nfet_01v8 (7)                
+Number of devices: 14                      |Number of devices: 14                      
+Number of nets: 11                         |Number of nets: 11                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: csrl_edge                       |Circuit 2: csrl_edge                       
+-------------------------------------------|-------------------------------------------
+Dn                                         |Dn                                         
+D                                          |D                                          
+Q                                          |Q                                          
+Qn                                         |Qn                                         
+VN                                         |VN                                         
+VP                                         |VP                                         
+clk                                        |clk                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes csrl_edge and csrl_edge are equivalent.
+
+Subcircuit summary:
+Circuit 1: shift_register.spice            |Circuit 2: shift_register_xschem.spice     
+-------------------------------------------|-------------------------------------------
+csrl_edge (4)                              |csrl_edge (4)                              
+Number of devices: 4                       |Number of devices: 4                       
+Number of nets: 13                         |Number of nets: 13                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+Cells have no pins;  pin matching not needed.
+Device classes shift_register.spice and shift_register_xschem.spice are equivalent.
+
+Final result: Circuits match uniquely.
+.
