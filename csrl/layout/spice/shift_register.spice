@@ -17,10 +17,10 @@ X12 VP a_800_1290# a_800_980# VP sky130_fd_pr__pfet_01v8 ad=0.225 pd=1.9 as=0.22
 X13 a_800_980# clk Dn VP sky130_fd_pr__pfet_01v8 ad=0.225 pd=1.9 as=0.225 ps=1.9 w=0.5 l=0.15
 .ends
 
-.subckt shift_register
+**.subckt shift_register
 Xcsrl_edge_0 VP clk VN csrl_edge_1/D csrl_edge_1/Dn D Dn csrl_edge
 Xcsrl_edge_1 VP clk VN csrl_edge_2/D csrl_edge_2/Dn csrl_edge_1/D csrl_edge_1/Dn csrl_edge
 Xcsrl_edge_2 VP clk VN csrl_edge_3/D csrl_edge_3/Dn csrl_edge_2/D csrl_edge_2/Dn csrl_edge
 Xcsrl_edge_3 VP clk VN Q Qn csrl_edge_3/D csrl_edge_3/Dn csrl_edge
-.ends
+**.ends
 
