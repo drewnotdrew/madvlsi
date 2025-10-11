@@ -1,0 +1,227 @@
+timestamp 1760098456
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use csrl_edge csrl_edge_3 1 0 2030 0 1 160
+use csrl_edge csrl_edge_2 1 0 1110 0 1 160
+use csrl_edge csrl_edge_1 1 0 190 0 1 160
+use csrl_edge csrl_edge_0 1 0 -730 0 1 160
+node "VN" 0 40.8444 70 0 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2500 200 0 0 0 0 0 0 0 0 0 0
+node "VP" 0 27.9587 70 1590 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1200 140 0 0 0 0 0 0 0 0 0 0
+node "Qn" 13 31.1309 3710 560 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1600 160 0 0 0 0 0 0 0 0 0 0 0 0
+node "Dn" 13 28.2223 70 560 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1600 160 0 0 0 0 0 0 0 0 0 0 0 0
+node "clk" 13 24.0511 70 730 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1600 160 0 0 0 0 0 0 0 0 0 0 0 0
+node "Q" 13 31.1309 3710 1030 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1600 160 0 0 0 0 0 0 0 0 0 0 0 0
+node "D" 13 29.8684 70 1030 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1600 160 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "VN" "Dn" 0.158028
+cap "Dn" "VP" 0.0193705
+cap "Q" "Qn" 2.22707
+cap "Dn" "clk" 6.4557
+cap "VN" "VP" 0.830189
+cap "VN" "D" 0.0263427
+cap "VN" "clk" 0.0533593
+cap "D" "VP" 0.105415
+cap "VP" "clk" 0.0279162
+cap "D" "clk" 3.54167
+cap "csrl_edge_1/a_800_1290#" "csrl_edge_1/D" 44.6819
+cap "csrl_edge_1/a_800_980#" "csrl_edge_3/VP" 22.3088
+cap "csrl_edge_0/a_800_1290#" "csrl_edge_1/D" 1.73409
+cap "csrl_edge_1/Dn" "csrl_edge_3/clk" 6.13766
+cap "csrl_edge_0/Dn" "csrl_edge_3/VN" -0.158028
+cap "csrl_edge_1/a_800_980#" "csrl_edge_1/D" 72.3884
+cap "csrl_edge_3/VN" "csrl_edge_3/clk" 0.73824
+cap "csrl_edge_2/Dn" "csrl_edge_1/Dn" 0.913324
+cap "csrl_edge_0/a_800_980#" "csrl_edge_3/clk" 0.8
+cap "csrl_edge_0/a_1410_1020#" "csrl_edge_3/VP" 0.667443
+cap "csrl_edge_0/D" "csrl_edge_3/clk" -3.54167
+cap "csrl_edge_3/VP" "csrl_edge_3/clk" 13.7619
+cap "csrl_edge_1/D" "csrl_edge_3/clk" 49.5089
+cap "csrl_edge_1/a_800_1290#" "csrl_edge_3/clk" 0.564527
+cap "csrl_edge_1/a_800_980#" "csrl_edge_0/a_1410_1020#" 3.54167
+cap "csrl_edge_0/Dn" "csrl_edge_3/clk" -6.4557
+cap "csrl_edge_1/a_800_1290#" "csrl_edge_2/D" 0.837174
+cap "csrl_edge_1/Dn" "csrl_edge_3/VN" 114.313
+cap "csrl_edge_0/a_800_980#" "csrl_edge_3/VN" 1.16817
+cap "csrl_edge_1/a_1000_n110#" "csrl_edge_0/a_800_980#" 0.144
+cap "csrl_edge_1/Dn" "csrl_edge_3/VP" 15.4268
+cap "csrl_edge_0/D" "csrl_edge_3/VN" -0.0263427
+cap "csrl_edge_3/VN" "csrl_edge_3/VP" 3.34248
+cap "csrl_edge_1/Dn" "csrl_edge_1/a_800_1290#" 1.55566
+cap "csrl_edge_1/Dn" "csrl_edge_1/D" 1.9859
+cap "csrl_edge_0/D" "csrl_edge_3/VP" -0.0388313
+cap "csrl_edge_1/a_1000_n110#" "csrl_edge_1/D" 1.49547
+cap "csrl_edge_1/a_800_1290#" "csrl_edge_3/VN" 0.675285
+cap "csrl_edge_1/D" "csrl_edge_3/VN" 14.0178
+cap "csrl_edge_1/a_800_980#" "csrl_edge_1/Dn" 21.9139
+cap "csrl_edge_1/a_800_1290#" "csrl_edge_0/a_800_980#" 0.0697696
+cap "csrl_edge_0/a_800_980#" "csrl_edge_1/D" 0.0769448
+cap "csrl_edge_1/a_800_980#" "csrl_edge_3/VN" 0.676808
+cap "csrl_edge_1/D" "csrl_edge_3/VP" 122.41
+cap "csrl_edge_1/a_800_980#" "csrl_edge_0/a_800_980#" 1.71029
+cap "csrl_edge_1/a_800_1290#" "csrl_edge_3/VP" -2.0975
+cap "csrl_edge_0/a_800_1290#" "csrl_edge_3/VP" 0.120439
+cap "csrl_edge_2/a_800_1290#" "csrl_edge_1/a_800_980#" 0.0697696
+cap "csrl_edge_1/a_800_1290#" "csrl_edge_2/D" 0.896915
+cap "csrl_edge_2/a_800_980#" "csrl_edge_3/a_800_1290#" 0.0697696
+cap "csrl_edge_3/Dn" "csrl_edge_3/a_800_1290#" 0.91483
+cap "csrl_edge_2/a_800_980#" "csrl_edge_3/a_1000_n110#" 0.144
+cap "csrl_edge_3/clk" "csrl_edge_1/a_800_980#" 0.8
+cap "csrl_edge_1/Dn" "csrl_edge_1/a_800_980#" 0.237516
+cap "csrl_edge_2/a_800_980#" "csrl_edge_2/D" 74.8104
+cap "csrl_edge_3/VP" "csrl_edge_2/D" 122.41
+cap "csrl_edge_3/VN" "csrl_edge_2/D" 14.0178
+cap "csrl_edge_3/a_800_1290#" "csrl_edge_3/clk" 0.225273
+cap "csrl_edge_3/a_800_1290#" "csrl_edge_3/D" 22.3263
+cap "csrl_edge_0/a_800_980#" "csrl_edge_1/a_800_980#" 0.629213
+cap "csrl_edge_2/Dn" "csrl_edge_2/D" 1.9859
+cap "csrl_edge_3/VN" "csrl_edge_3/VP" 7.51515
+cap "csrl_edge_2/a_800_1290#" "csrl_edge_2/D" 44.6819
+cap "csrl_edge_2/a_800_980#" "csrl_edge_3/VP" 22.3088
+cap "csrl_edge_2/a_800_980#" "csrl_edge_3/VN" 3.16875
+cap "csrl_edge_3/D" "csrl_edge_3/a_1000_n110#" 1.49547
+cap "csrl_edge_3/Dn" "csrl_edge_3/VP" 16.188
+cap "csrl_edge_2/Dn" "csrl_edge_2/a_800_980#" 22.1514
+cap "csrl_edge_3/Dn" "csrl_edge_3/VN" 60.7512
+cap "csrl_edge_2/Dn" "csrl_edge_3/VN" 114.467
+cap "csrl_edge_2/D" "csrl_edge_3/clk" 49.5089
+cap "csrl_edge_2/Dn" "csrl_edge_3/VP" 15.4268
+cap "csrl_edge_2/a_800_980#" "csrl_edge_3/a_800_980#" 1.16975
+cap "csrl_edge_2/a_1000_n110#" "csrl_edge_1/a_800_980#" 0.144
+cap "csrl_edge_1/D" "csrl_edge_1/a_800_980#" 2.42196
+cap "csrl_edge_2/a_800_1290#" "csrl_edge_3/VP" -2.0975
+cap "csrl_edge_3/Dn" "csrl_edge_2/Dn" 1.82665
+cap "csrl_edge_1/a_1410_1020#" "csrl_edge_2/a_800_980#" 3.54167
+cap "csrl_edge_1/a_1410_1020#" "csrl_edge_3/VP" 0.667443
+cap "csrl_edge_2/a_800_1290#" "csrl_edge_3/VN" 0.675285
+cap "csrl_edge_3/Dn" "csrl_edge_3/a_800_980#" 10.9369
+cap "csrl_edge_3/Dn" "csrl_edge_3/Qn" 0.913324
+cap "csrl_edge_2/a_1410_1020#" "csrl_edge_3/VP" 0.667443
+cap "csrl_edge_2/Dn" "csrl_edge_2/a_800_1290#" 1.55566
+cap "csrl_edge_2/a_800_980#" "csrl_edge_3/clk" 0.4
+cap "csrl_edge_3/VN" "csrl_edge_3/clk" 0.791599
+cap "csrl_edge_3/D" "csrl_edge_3/VP" 122.974
+cap "csrl_edge_3/VP" "csrl_edge_3/clk" 28.285
+cap "csrl_edge_3/D" "csrl_edge_3/VN" 14.0178
+cap "csrl_edge_3/Dn" "csrl_edge_3/clk" 4.07012
+cap "csrl_edge_3/Dn" "csrl_edge_3/D" 1.46841
+cap "csrl_edge_2/Dn" "csrl_edge_3/clk" 6.13766
+cap "csrl_edge_2/Dn" "csrl_edge_1/Dn" 0.913324
+cap "csrl_edge_2/a_1410_1020#" "csrl_edge_3/a_800_980#" 1.77083
+cap "csrl_edge_3/D" "csrl_edge_3/a_800_980#" 36.4772
+cap "csrl_edge_2/a_800_1290#" "csrl_edge_3/clk" 0.564527
+cap "csrl_edge_2/a_800_1290#" "csrl_edge_3/D" 0.837174
+cap "csrl_edge_2/a_1000_n110#" "csrl_edge_2/D" 1.49547
+cap "csrl_edge_3/D" "csrl_edge_3/clk" 24.8496
+cap "csrl_edge_2/D" "csrl_edge_1/a_800_980#" 0.0769448
+cap "csrl_edge_2/a_800_980#" "csrl_edge_1/a_800_980#" 2.33951
+cap "csrl_edge_3/VN" "csrl_edge_1/a_800_980#" 2.49194
+cap "csrl_edge_3/Qn" "csrl_edge_3/Q" -2.22707
+cap "csrl_edge_3/Qn" "csrl_edge_3/Dn" 0.913324
+cap "csrl_edge_3/VN" "csrl_edge_3/clk" 0.791599
+cap "csrl_edge_3/a_800_980#" "csrl_edge_3/D" 23.614
+cap "csrl_edge_3/a_800_1290#" "csrl_edge_3/VP" -2.21794
+cap "csrl_edge_3/Dn" "csrl_edge_3/VP" -8.88178e-16
+cap "csrl_edge_3/a_800_980#" "csrl_edge_2/a_1410_1020#" 1.77083
+cap "csrl_edge_3/a_800_1290#" "csrl_edge_3/Dn" 0.640835
+cap "csrl_edge_2/a_800_980#" "csrl_edge_3/clk" 0.4
+cap "csrl_edge_3/a_800_1290#" "csrl_edge_3/clk" 0.339254
+cap "csrl_edge_3/a_800_980#" "csrl_edge_3/VN" 2.00058
+cap "csrl_edge_3/Dn" "csrl_edge_3/clk" 2.06754
+cap "csrl_edge_3/a_800_1290#" "csrl_edge_3/D" 22.3556
+cap "csrl_edge_3/Qn" "csrl_edge_3/VN" 0.154226
+cap "csrl_edge_3/D" "csrl_edge_3/clk" 12.9182
+cap "csrl_edge_3/a_800_980#" "csrl_edge_2/a_800_980#" 1.16975
+cap "csrl_edge_3/a_800_980#" "csrl_edge_3/VP" 12.1627
+cap "csrl_edge_3/a_800_980#" "csrl_edge_3/Dn" 11.2145
+cap "csrl_edge_3/a_800_1290#" "csrl_edge_3/VN" 0.675285
+cap "csrl_edge_1/a_800_1290#" "csrl_edge_1/Dn" 27.6733
+cap "csrl_edge_1/a_800_980#" "csrl_edge_1/D" 13.16
+cap "csrl_edge_0/a_800_1290#" "csrl_edge_3/VP" 0.158151
+cap "csrl_edge_1/a_1410_1020#" "csrl_edge_1/D" 0.144
+cap "csrl_edge_0/D" "csrl_edge_3/VP" -0.066584
+cap "csrl_edge_3/clk" "csrl_edge_3/VP" -0.0279162
+cap "csrl_edge_3/VN" "csrl_edge_3/VP" -0.415094
+cap "csrl_edge_3/VP" "csrl_edge_1/Dn" 8.58575
+cap "csrl_edge_1/a_800_1290#" "csrl_edge_1/D" 17.1313
+cap "csrl_edge_3/VP" "csrl_edge_1/a_800_980#" -0.159864
+cap "csrl_edge_0/Dn" "csrl_edge_3/VP" -0.0193705
+cap "csrl_edge_3/VP" "csrl_edge_1/D" 46.6316
+cap "csrl_edge_1/a_800_980#" "csrl_edge_1/Dn" 1.91364
+cap "csrl_edge_2/Dn" "csrl_edge_1/D" 0.0697696
+cap "csrl_edge_1/a_800_1290#" "csrl_edge_3/VP" 19.5226
+cap "csrl_edge_1/a_800_1290#" "csrl_edge_0/a_800_1290#" 1.82665
+cap "csrl_edge_1/D" "csrl_edge_2/D" 1.16975
+cap "csrl_edge_3/clk" "csrl_edge_1/D" 0.4
+cap "csrl_edge_1/a_800_1290#" "csrl_edge_2/a_800_1290#" 0.913324
+cap "csrl_edge_1/D" "csrl_edge_1/Dn" 7.10543e-15
+cap "csrl_edge_1/a_800_1290#" "csrl_edge_3/clk" 0.109317
+cap "csrl_edge_3/Dn" "csrl_edge_3/a_800_1290#" 13.8366
+cap "csrl_edge_3/Dn" "csrl_edge_3/D" 7.10543e-15
+cap "csrl_edge_3/VP" "csrl_edge_3/clk" -0.0164638
+cap "csrl_edge_2/a_800_1290#" "csrl_edge_1/a_800_1290#" 0.913324
+cap "csrl_edge_1/D" "csrl_edge_2/D" 1.16975
+cap "csrl_edge_2/a_800_1290#" "csrl_edge_3/clk" 0.109317
+cap "csrl_edge_3/Dn" "csrl_edge_3/VP" 6.87434
+cap "csrl_edge_2/D" "csrl_edge_3/D" 2.33951
+cap "csrl_edge_3/a_800_980#" "csrl_edge_3/D" 6.42424
+cap "csrl_edge_2/a_800_980#" "csrl_edge_2/Dn" 1.91364
+cap "csrl_edge_2/D" "csrl_edge_2/Dn" 7.10543e-15
+cap "csrl_edge_3/VP" "csrl_edge_2/a_800_980#" -0.159864
+cap "csrl_edge_3/VP" "csrl_edge_2/D" 46.6205
+cap "csrl_edge_3/a_800_1290#" "csrl_edge_3/D" 8.0451
+cap "csrl_edge_2/D" "csrl_edge_2/a_1410_1020#" 0.144
+cap "csrl_edge_3/Q" "csrl_edge_3/D" 1.16975
+cap "csrl_edge_2/a_800_1290#" "csrl_edge_2/D" 17.1313
+cap "csrl_edge_3/Qn" "csrl_edge_3/D" 0.0697696
+cap "csrl_edge_3/VP" "csrl_edge_3/D" 46.2248
+cap "csrl_edge_2/D" "csrl_edge_3/clk" 0.8
+cap "csrl_edge_2/a_800_1290#" "csrl_edge_3/a_800_1290#" 0.913324
+cap "csrl_edge_3/VP" "csrl_edge_2/Dn" 8.58575
+cap "csrl_edge_3/a_1410_1020#" "csrl_edge_3/D" 0.144
+cap "csrl_edge_1/D" "csrl_edge_3/clk" 0.4
+cap "csrl_edge_3/Dn" "csrl_edge_2/D" 0.0697696
+cap "csrl_edge_3/Dn" "csrl_edge_3/a_800_980#" 1.15471
+cap "csrl_edge_2/a_800_1290#" "csrl_edge_2/Dn" 27.6733
+cap "csrl_edge_2/a_800_1290#" "csrl_edge_3/VP" 19.5226
+cap "csrl_edge_3/clk" "csrl_edge_3/D" 0.4
+cap "csrl_edge_2/a_800_980#" "csrl_edge_2/D" 13.16
+cap "csrl_edge_3/Dn" "csrl_edge_3/a_800_1290#" 2.58446
+cap "csrl_edge_3/a_800_980#" "csrl_edge_3/VP" -0.159864
+cap "csrl_edge_3/D" "csrl_edge_3/clk" 0.4
+cap "csrl_edge_3/Dn" "csrl_edge_3/a_800_980#" 0.758929
+cap "csrl_edge_3/D" "csrl_edge_3/Q" 1.16975
+cap "csrl_edge_2/a_800_1290#" "csrl_edge_3/a_800_1290#" 0.913324
+cap "csrl_edge_3/a_800_1290#" "csrl_edge_3/clk" 0.109317
+cap "csrl_edge_3/Dn" "csrl_edge_3/VP" 1.71141
+cap "csrl_edge_3/VP" "csrl_edge_3/Q" -0.0110673
+cap "csrl_edge_3/clk" "csrl_edge_3/VP" -0.0082319
+cap "csrl_edge_3/a_800_1290#" "csrl_edge_3/D" 4.89631
+cap "csrl_edge_3/D" "csrl_edge_3/a_800_980#" 6.73575
+cap "csrl_edge_3/D" "csrl_edge_3/VP" 0.395783
+cap "csrl_edge_3/a_800_1290#" "csrl_edge_3/VP" 10.1488
+merge "csrl_edge_0/VN" "VN" -980.128 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2500 -4120 0 0 0 0 0 0 0 0 0 0
+merge "VN" "csrl_edge_1/VN"
+merge "csrl_edge_1/VN" "csrl_edge_2/VN"
+merge "csrl_edge_2/VN" "csrl_edge_3/VN"
+merge "csrl_edge_3/VN" "VSUBS"
+merge "csrl_edge_0/clk" "clk" -307.086 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1600 -480 0 0 0 0 0 0 0 0 0 0 0 0
+merge "clk" "csrl_edge_1/clk"
+merge "csrl_edge_1/clk" "csrl_edge_2/clk"
+merge "csrl_edge_2/clk" "csrl_edge_3/clk"
+merge "csrl_edge_0/Qn" "csrl_edge_1/Dn" -175.147 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -80 0 0 0 0 0 0 0 0 0 0 0 0
+merge "csrl_edge_3/Qn" "Qn" -33.6155 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1600 -160 0 0 0 0 0 0 0 0 0 0 0 0
+merge "csrl_edge_0/VP" "VP" -1014.12 0 0 0 0 -57600 -3600 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1200 -4060 0 0 0 0 0 0 0 0 0 0
+merge "VP" "csrl_edge_1/VP"
+merge "csrl_edge_1/VP" "csrl_edge_2/VP"
+merge "csrl_edge_2/VP" "csrl_edge_3/VP"
+merge "csrl_edge_1/Qn" "csrl_edge_2/Dn" -177.631 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -80 0 0 0 0 0 0 0 0 0 0 0 0
+merge "csrl_edge_3/Q" "Q" -33.4934 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1600 -160 0 0 0 0 0 0 0 0 0 0 0 0
+merge "csrl_edge_0/Dn" "Dn" -28.2223 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1600 -160 0 0 0 0 0 0 0 0 0 0 0 0
+merge "csrl_edge_1/Q" "csrl_edge_2/D" -332.693 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -80 0 0 0 0 0 0 0 0 0 0 0 0
+merge "csrl_edge_0/D" "D" -29.8684 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1600 -160 0 0 0 0 0 0 0 0 0 0 0 0
+merge "csrl_edge_2/Qn" "csrl_edge_3/Dn" -186.177 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -160 0 0 0 0 0 0 0 0 0 0 0 0
+merge "csrl_edge_2/Q" "csrl_edge_3/D" -323.286 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -160 0 0 0 0 0 0 0 0 0 0 0 0
+merge "csrl_edge_0/Q" "csrl_edge_1/D" -330.33 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -80 0 0 0 0 0 0 0 0 0 0 0 0
