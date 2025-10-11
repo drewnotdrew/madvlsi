@@ -3,9 +3,12 @@ G {}
 K {type=subcircuit
 format="@name @pinlist @symname"
 template="name=X1"
-schematic=../schematic/csrl_falling_edge.sch}
+schematic=../schematic/shift_register.sch}
 V {}
-S {}
+S {type=subcircuit
+format="@name @pinlist @symname"
+template="name=X1"
+schematic=../schematic/crsl_n.sch}
 F {}
 E {}
 L 4 0 -80 10 -80 {}
@@ -37,9 +40,6 @@ L 4 60 -10 60 0 {}
 L 4 40 -10 40 0 {}
 L 4 10 -40 20 -40 {}
 L 4 10 -80 20 -80 {}
-L 4 50 -65 50 -55 {}
-L 4 45 -65 50 -65 {}
-L 4 50 -55 55 -55 {}
 B 5 -2.5 -82.5 2.5 -77.5 {name=D
 dir=inout}
 B 5 -2.5 -42.5 2.5 -37.5 {name=Dn
@@ -58,3 +58,4 @@ T {D} 25 -87.5 0 0 0.25 0.25 {}
 T {Dn} 25 -47.5 0 0 0.25 0.25 {}
 T {Qn} 55 -47.5 0 0 0.25 0.25 {}
 T {Q} 65 -87.5 0 0 0.25 0.25 {}
+T {x4} 40 -67.5 0 0 0.25 0.25 {}
