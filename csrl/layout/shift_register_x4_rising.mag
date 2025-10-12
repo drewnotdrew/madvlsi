@@ -1,0 +1,37 @@
+magic
+tech sky130A
+timestamp 1760098456
+<< locali >>
+rect 35 515 55 535
+rect 1855 515 1875 535
+rect 35 365 55 385
+rect 35 280 55 300
+rect 1855 280 1875 300
+<< metal1 >>
+rect 35 795 50 815
+rect 35 0 60 25
+use csrl_edge  csrl_edge_0
+timestamp 1760007314
+transform 1 0 -365 0 1 80
+box 380 -80 860 735
+use csrl_edge  csrl_edge_1
+timestamp 1760007314
+transform 1 0 95 0 1 80
+box 380 -80 860 735
+use csrl_edge  csrl_edge_2
+timestamp 1760007314
+transform 1 0 555 0 1 80
+box 380 -80 860 735
+use csrl_edge  csrl_edge_3
+timestamp 1760007314
+transform 1 0 1015 0 1 80
+box 380 -80 860 735
+<< labels >>
+rlabel locali 35 280 35 300 7 Dn
+rlabel locali 35 365 35 385 7 clk
+rlabel locali 35 515 35 535 7 D
+rlabel metal1 35 795 35 815 7 VP
+rlabel metal1 35 0 35 25 7 VN
+rlabel locali 1875 515 1875 535 3 Q
+rlabel locali 1875 280 1875 300 3 Qn
+<< end >>
