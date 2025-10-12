@@ -36,7 +36,7 @@ C {iopin.sym} 60 -200 2 0 {name=p2 lab=D}
 C {iopin.sym} 60 -160 2 0 {name=p3 lab=Dn}
 C {iopin.sym} 110 -270 3 0 {name=p12 lab=VP}
 C {iopin.sym} 120 -60 1 0 {name=p6 lab=VN}
-C {csrl_edge.sym} 60 -120 0 0 {name=X1}
-C {csrl_edge.sym} 160 -120 0 0 {name=X2}
-C {csrl_edge.sym} 260 -120 0 0 {name=X3}
-C {csrl_edge.sym} 360 -120 0 0 {name=X4}
+C {csrl_falling_edge.sym} 60 -120 0 0 {name=X1}
+C {csrl_falling_edge.sym} 160 -120 0 0 {name=X2}
+C {csrl_falling_edge.sym} 260 -120 0 0 {name=X3}
+C {csrl_falling_edge.sym} 360 -120 0 0 {name=X4}
