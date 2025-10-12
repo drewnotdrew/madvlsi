@@ -1,0 +1,20 @@
+* SPICE3 file created from csrl_edge.ext - technology: sky130A
+
+.subckt csrl_edge VP clk VN Q Qn D Dn
+X0 a_1410_1020# clk VP VP sky130_fd_pr__pfet_01v8 ad=0.33332 pd=1.765 as=0.9 ps=4.9 w=2 l=0.15
+X1 a_1000_n110# clk VN VN sky130_fd_pr__nfet_01v8 ad=0.33332 pd=1.765 as=0.9 ps=4.9 w=2 l=0.15
+X2 VN Qn Q VN sky130_fd_pr__nfet_01v8 ad=0.225 pd=1.9 as=0.225 ps=1.9 w=0.5 l=0.15
+X3 Q clk a_800_1290# VN sky130_fd_pr__nfet_01v8 ad=0.225 pd=1.9 as=0.225 ps=1.9 w=0.5 l=0.15
+X4 a_800_980# a_800_1290# a_1000_n110# VN sky130_fd_pr__nfet_01v8 ad=0.225 pd=1.9 as=0.33332 ps=1.765 w=0.5 l=0.15
+X5 VP a_800_980# a_800_1290# VP sky130_fd_pr__pfet_01v8 ad=0.225 pd=1.9 as=0.225 ps=1.9 w=0.5 l=0.15
+X6 a_800_1290# a_800_980# a_1000_n110# VN sky130_fd_pr__nfet_01v8 ad=0.225 pd=1.9 as=0.33332 ps=1.765 w=0.5 l=0.15
+X7 Q Qn a_1410_1020# VP sky130_fd_pr__pfet_01v8 ad=0.225 pd=1.9 as=0.33332 ps=1.765 w=0.5 l=0.15
+X8 Qn Q a_1410_1020# VP sky130_fd_pr__pfet_01v8 ad=0.225 pd=1.9 as=0.33332 ps=1.765 w=0.5 l=0.15
+X9 Qn clk a_800_980# VN sky130_fd_pr__nfet_01v8 ad=0.225 pd=1.9 as=0.225 ps=1.9 w=0.5 l=0.15
+X10 VN Q Qn VN sky130_fd_pr__nfet_01v8 ad=0.225 pd=1.9 as=0.225 ps=1.9 w=0.5 l=0.15
+X11 a_800_1290# clk D VP sky130_fd_pr__pfet_01v8 ad=0.225 pd=1.9 as=0.225 ps=1.9 w=0.5 l=0.15
+X12 VP a_800_1290# a_800_980# VP sky130_fd_pr__pfet_01v8 ad=0.225 pd=1.9 as=0.225 ps=1.9 w=0.5 l=0.15
+X13 a_800_980# clk Dn VP sky130_fd_pr__pfet_01v8 ad=0.225 pd=1.9 as=0.225 ps=1.9 w=0.5 l=0.15
+C0 VP VN 2.43427f
+.ends
+
