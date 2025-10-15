@@ -1,0 +1,78 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{hypcap}
+\usepackage{relsize}
+\usepackage{caption}
+\usepackage{array} 
+\usepackage[margin=1in, paperwidth=8.5in, paperheight=11in]{geometry}
+\usepackage{float}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{textgreek}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{parskip}
+\usepackage{svg}
+\usepackage{blindtext}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{siunitx}
+% \hypersetup{
+%     colorlinks=true,
+%     linkcolor=blue,
+%     filecolor=magenta,
+%     urlcolor=cyan,
+% }
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  % frame=single,
+  breaklines=true,
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+}
+
+\usepackage{graphicx}
+\title{Miniproject 3: 7-Bit DAC}
+\author{Drew Pang}
+\date{27 October, 2025}
+
+\begin{document}
+
+\maketitle
+
+\item[-] Output as a current source or sink that:
+\item[-] changes by no more than 0.5\%/V over 80\% of the power supply voltage
+\item[-] DNL of no more than 2 LSBs, INL of no more than 4 LSBs with no mismatch
+\item[-] DNL of no more than 8 LSBs, INL of no more than 8 LSBs with mismatch
+\item[-] May use a single external resistor to bias the DAC
+\item[-] Assume DAC digital inputs are ideal
+
+
+% \section*{Schematic Capture and Simulation}
+
+% \subsection*{$\phi$ and $\bar{\phi}$  CSRL Latches}
+
+% \begin{figure}[H]
+%   \centering
+%   \includesvg[inkscapelatex=false,width=8cm]{media/csrl.svg}
+%   \includesvg[inkscapelatex=false,width=8cm]{media/csrl_n.svg}
+%   \caption{$\phi$ and $\bar{\phi}$ CSRL latch transistor level schematics}
+% \end{figure}
+
+\newpage
+
+\section*{Appendix D: Git Repository}
+
+All schematics, symbols, simulation, and layout can be found at \href{https://github.com/drewnotdrew/madvlsi}{https://github.com/drewnotdrew/madvlsi}. Relevant DAC files are in the dac directory, though some common files are in lib/digital.
+
+
+\end{document}
+
+
