@@ -1,0 +1,20 @@
+magic
+tech sky130A
+timestamp 1763196208
+use bias_gen  bias_gen_0 ~/Documents/git/madvlsi/dac/layout/bias_gen
+timestamp 1763195015
+transform -1 0 2750 0 -1 6185
+box 5900 12450 12700 17900
+use current_divider  current_divider_0 ~/Documents/git/madvlsi/dac/layout/current_divider
+timestamp 1763024294
+transform 1 0 -9037 0 1 -4298
+box -1000 -1000 33950 2400
+use current_mirror  current_mirror_0 ~/Documents/git/madvlsi/dac/layout/current_mirror
+timestamp 1763033020
+transform 1 0 683 0 -1 6697
+box 16150 14100 20200 17250
+use m2m_ladder  m2m_ladder_0 ~/Documents/git/madvlsi/dac/layout/m2m_ladder
+timestamp 1763181149
+transform 1 0 -1743 0 1 -14400
+box -100 2700 17550 8100
+<< end >>

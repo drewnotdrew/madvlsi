@@ -1,0 +1,25 @@
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+Flattening unmatched subcell inverter in circuit m2m_ladder_schematic.spice (1)(7 instances)
+
+Class m2m_ladder_layout.spice (0):  Merged 8 parallel devices.
+Subcircuit summary:
+Circuit 1: m2m_ladder_layout.spice         |Circuit 2: m2m_ladder_schematic.spice      
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__pfet_01v8 (44->36)           |sky130_fd_pr__pfet_01v8 (44->36)           
+sky130_fd_pr__nfet_01v8 (7)                |sky130_fd_pr__nfet_01v8 (7)                
+Number of devices: 43                      |Number of devices: 43                      
+Number of nets: 34                         |Number of nets: 34                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+Cells have no pins;  pin matching not needed.
+Device classes m2m_ladder_layout.spice and m2m_ladder_schematic.spice are equivalent.
+
+Final result: Circuits match uniquely.
+.
