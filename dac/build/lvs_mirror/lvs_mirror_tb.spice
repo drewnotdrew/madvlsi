@@ -1,0 +1,42 @@
+** sch_path: /home/drew/Documents/git/madvlsi/dac/schematic/lvs_mirror_tb.sch
+**.subckt lvs_mirror_tb
+I1 GND ib 10p
+I2 GND iin 1u
+V2 net1 GND 1.8
+X1 GND iin ib net1 lvs_mirror u_w=4 u_l=12 m=2 r=1M
+**** begin user architecture code
+.lib /usr/local/share/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
+
+.control
+  set wr_vecnames
+  set wr_singlescale
+  dc V2 0 1.8 0.01
+  wrdata ~/documents/git/madvlsi/dac/build/lvs_mirror/lvs_mirror_tb.txt i(V2)
+.endc
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  lvs_mirror.sym # of pins=4
+** sym_path: /home/drew/documents/git/madvlsi/lib/analog/symbol/lvs_mirror.sym
+** sch_path: /home/drew/Documents/git/madvlsi/lib/analog/schematic/lvs_mirror.sch
+.subckt lvs_mirror VN IIN IB IOUT  u_w=3 u_l=3  r=1M
+*.iopin VN
+*.iopin IOUT
+*.iopin IIN
+*.iopin IB
+XM1 IB IB net1 GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM2 net1 IB VN GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM3 net2 IB VN GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM4 net1 IIN IIN GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM5 IOUT IIN net2 GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+C1 IIN IB 1p m=1
+.ends
+
+.GLOBAL GND
+.end
