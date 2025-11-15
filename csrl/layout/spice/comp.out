@@ -36,7 +36,7 @@ Cell pin lists are equivalent.
 Device classes csrl_edge and csrl_edge are equivalent.
 
 Subcircuit summary:
-Circuit 1: shift_register.spice            |Circuit 2: shift_register_xschem.spice     
+Circuit 1: shift_register_falling.spice    |Circuit 2: shift_register_falling_xschem.s 
 -------------------------------------------|-------------------------------------------
 csrl_edge (4)                              |csrl_edge (4)                              
 Number of devices: 4                       |Number of devices: 4                       
@@ -44,7 +44,7 @@ Number of nets: 13                         |Number of nets: 13
 ---------------------------------------------------------------------------------------
 Netlists match uniquely.
 Cells have no pins;  pin matching not needed.
-Device classes shift_register.spice and shift_register_xschem.spice are equivalent.
+Device classes shift_register_falling.spice and shift_register_falling_xschem.spice are equivalent.
 
 Final result: Circuits match uniquely.
 .

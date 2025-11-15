@@ -1,0 +1,28 @@
+* SPICE3 file created from shift_register_x4_rising.ext - technology: sky130A
+
+.subckt csrl_rising_edge VP D clk Dn VN Qn Q
+X0 Qn Q a_830_n110# VN sky130_fd_pr__nfet_01v8 ad=0.225 pd=1.9 as=0.33332 ps=1.765 w=0.5 l=0.15
+X1 Q Qn a_830_n110# VN sky130_fd_pr__nfet_01v8 ad=0.225 pd=1.9 as=0.33332 ps=1.765 w=0.5 l=0.15
+X2 VN a_220_n80# a_220_230# VN sky130_fd_pr__nfet_01v8 ad=0.225 pd=1.9 as=0.225 ps=1.9 w=0.5 l=0.15
+X3 a_220_n80# clk Dn VN sky130_fd_pr__nfet_01v8 ad=0.225 pd=1.9 as=0.225 ps=1.9 w=0.5 l=0.15
+X4 Q clk a_220_230# VP sky130_fd_pr__pfet_01v8 ad=0.225 pd=1.9 as=0.225 ps=1.9 w=0.5 l=0.15
+X5 Qn clk a_650_400# VP sky130_fd_pr__pfet_01v8 ad=0.225 pd=1.9 as=0.225 ps=1.9 w=0.5 l=0.15
+X6 a_420_1020# clk VP VP sky130_fd_pr__pfet_01v8 ad=0.33332 pd=1.765 as=0.9 ps=4.9 w=2 l=0.15
+X7 VP Qn Q VP sky130_fd_pr__pfet_01v8 ad=0.225 pd=1.9 as=0.225 ps=1.9 w=0.5 l=0.15
+X8 a_830_n110# clk VN VN sky130_fd_pr__nfet_01v8 ad=0.33332 pd=1.765 as=0.9 ps=4.9 w=2 l=0.15
+X9 VP Q Qn VP sky130_fd_pr__pfet_01v8 ad=0.225 pd=1.9 as=0.225 ps=1.9 w=0.5 l=0.15
+X10 VN a_220_230# a_220_n80# VN sky130_fd_pr__nfet_01v8 ad=0.225 pd=1.9 as=0.225 ps=1.9 w=0.5 l=0.15
+X11 a_220_230# a_220_n80# a_420_1020# VP sky130_fd_pr__pfet_01v8 ad=0.225 pd=1.9 as=0.33332 ps=1.765 w=0.5 l=0.15
+X12 a_220_n80# a_220_230# a_420_1020# VP sky130_fd_pr__pfet_01v8 ad=0.225 pd=1.9 as=0.33332 ps=1.765 w=0.5 l=0.15
+X13 a_220_230# clk D VN sky130_fd_pr__nfet_01v8 ad=0.225 pd=1.9 as=0.225 ps=1.9 w=0.5 l=0.15
+.ends
+
+.subckt shift_register_x4_rising
+Xcsrl_rising_edge_0 VP D clk Dn VN csrl_rising_edge_1/Dn csrl_rising_edge_1/D csrl_rising_edge
+Xcsrl_rising_edge_1 VP csrl_rising_edge_1/D clk csrl_rising_edge_1/Dn VN csrl_rising_edge_2/Dn
++ csrl_rising_edge_2/D csrl_rising_edge
+Xcsrl_rising_edge_2 VP csrl_rising_edge_2/D clk csrl_rising_edge_2/Dn VN csrl_rising_edge_3/Dn
++ csrl_rising_edge_3/D csrl_rising_edge
+Xcsrl_rising_edge_3 VP csrl_rising_edge_3/D clk csrl_rising_edge_3/Dn VN Qn Q csrl_rising_edge
+.ends
+
