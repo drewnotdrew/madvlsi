@@ -1,0 +1,12 @@
+* SPICE3 file created from dac_tmp.ext - technology: sky130A
+
+X0 bias_gen_0/a_17900_29830# bias_gen_0/a_17900_29830# bias_gen_0/VP bias_gen_0/VP sky130_fd_pr__pfet_01v8 ad=16 pd=16 as=16 ps=16 w=4 l=12
+X1 VSUBS bias_gen_0/a_15100_29900# bias_gen_0/a_17900_29830# VSUBS sky130_fd_pr__nfet_01v8 ad=16 pd=16 as=16 ps=16 w=4 l=12
+X2 bias_gen_0/a_15100_29900# bias_gen_0/VBP bias_gen_0/VP bias_gen_0/VP sky130_fd_pr__pfet_01v8 ad=16 pd=16 as=16 ps=16 w=4 l=12
+X3 bias_gen_0/V bias_gen_0/a_15100_29900# bias_gen_0/a_15100_29900# VSUBS sky130_fd_pr__nfet_01v8 ad=16 pd=16 as=16 ps=16 w=4 l=12
+X4 bias_gen_0/V bias_gen_0/a_15100_29900# bias_gen_0/a_15100_29900# VSUBS sky130_fd_pr__nfet_01v8 ad=16 pd=16 as=16 ps=16 w=4 l=12
+X5 bias_gen_0/V bias_gen_0/a_15100_29900# bias_gen_0/a_15100_29900# VSUBS sky130_fd_pr__nfet_01v8 ad=16 pd=16 as=16 ps=16 w=4 l=12
+X6 bias_gen_0/VBP bias_gen_0/a_17900_29830# bias_gen_0/VP bias_gen_0/VP sky130_fd_pr__pfet_01v8 ad=16 pd=16 as=16 ps=16 w=4 l=12
+X7 VSUBS bias_gen_0/a_15100_31900# bias_gen_0/a_15100_31900# VSUBS sky130_fd_pr__nfet_01v8 ad=16 pd=16 as=16 ps=16 w=4 l=12
+X8 VSUBS bias_gen_0/a_15100_31900# bias_gen_0/VBP VSUBS sky130_fd_pr__nfet_01v8 ad=16 pd=16 as=16 ps=16 w=4 l=12
+X9 bias_gen_0/a_15100_31900# bias_gen_0/VBP bias_gen_0/VP bias_gen_0/VP sky130_fd_pr__pfet_01v8 ad=16 pd=16 as=16 ps=16 w=4 l=12

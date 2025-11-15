@@ -1,0 +1,8 @@
+magic
+tech sky130A
+timestamp 1763195015
+use bias_gen  bias_gen_0 ~/Documents/git/madvlsi/dac/layout/bias_gen
+timestamp 1763195015
+transform 1 0 -57500 0 1 -22050
+box 5900 12450 12700 17900
+<< end >>
