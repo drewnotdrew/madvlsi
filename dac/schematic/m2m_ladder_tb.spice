@@ -1,0 +1,190 @@
+** sch_path: /home/drew/Documents/git/madvlsi/dac/schematic/m2m_ladder_tb.sch
+**.subckt m2m_ladder_tb
+Vb0 b0 GND 1
+Vb1 b1 GND 1
+Vb2 b2 GND 1
+Vb3 b3 GND 1
+Vb4 b4 GND 1
+Vb5 b5 GND 1
+Vb6 b6 GND 1
+I1 GND I_in 1m
+V1 V_gate GND 1
+V2 VDD GND 1.8
+Vout net1 GND 0
+.save i(vout)
+X1 VDD GND b0 b1 b2 b3 b4 b5 b6 V_gate I_in GND net1 m2m_ladder u_w=3 u_l=3
+**** begin user architecture code
+
+
+.control
+  set wr_vecnames
+  set wr_singlescale
+  let code = 0
+  while code < 128
+    if code eq 0
+      let b0 = 0
+    else
+      let b0 = code % 2
+    end
+    if floor(code / 2) eq 0
+      let b1 = 0
+    else
+      let b1 = floor(code / 2) % 2
+    end
+    if floor(code / 4) eq 0
+      let b2 = 0
+    else
+      let b2 = floor(code / 4) % 2
+    end
+    if floor(code / 8) eq 0
+      let b3 = 0
+    else
+      let b3 = floor(code / 8) % 2
+    end
+    if floor(code / 16) eq 0
+      let b4 = 0
+    else
+      let b4 = floor(code / 16) % 2
+    end
+    if floor(code / 32) eq 0
+      let b5 = 0
+    else
+      let b5 = floor(code / 32) % 2
+    end
+    if floor(code / 64) eq 0
+      let b6 = 0
+    else
+      let b6 = floor(code / 64) % 2
+    end
+    alter vb0 $&b0
+    alter vb1 $&b1
+    alter vb2 $&b2
+    alter vb3 $&b3
+    alter vb4 $&b4
+    alter vb5 $&b5
+    alter vb6 $&b6
+    save all
+    op
+    wrdata ~/documents/git/madvlsi/dac/schematic/m2m_ladder_tb_LOL.txt v(b0) v(b1) v(b2) v(b3) v(b4) v(b5) v(b6) i(Vout)
+    if code eq 0
+      set appendwrite
+      set wr_vecnames = FALSE
+    end
+    let code = code + 1
+  end
+  quit
+.endc
+
+.lib /usr/local/share/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  m2m_ladder.sym # of pins=13
+** sym_path: /home/drew/documents/git/madvlsi/lib/analog/symbol/m2m_ladder.sym
+** sch_path: /home/drew/Documents/git/madvlsi/lib/analog/schematic/m2m_ladder.sch
+.subckt m2m_ladder VP VN D0 D1 D2 D3 D4 D5 D6 VGATE IIN IDUMP IOUT  u_w=3u u_l=3u
+*.iopin VN
+*.iopin VP
+*.ipin IIN
+*.ipin VGATE
+*.ipin D6
+*.ipin D5
+*.ipin D4
+*.ipin D3
+*.ipin D2
+*.ipin D1
+*.ipin D0
+*.opin IOUT
+*.opin IDUMP
+X8 D6 net2 VP VN inverter
+X9 D5 net5 VP VN inverter
+X11 D4 net8 VP VN inverter
+X12 D3 net11 VP VN inverter
+X13 D2 net14 VP VN inverter
+X14 D1 net17 VP VN inverter
+X15 D0 net20 VP VN inverter
+**** begin user architecture code
+
+
+.param u_w=3u u_l=3u
+
+
+**** end user architecture code
+XM1 IIN VGATE net3 GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=2 m=2
+XM2 net3 VGATE net6 GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=2 m=2
+XM3 net6 VGATE net9 GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=2 m=2
+XM4 net9 VGATE net12 GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=2 m=2
+XM5 net12 VGATE net15 GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=2 m=2
+XM6 net15 VGATE net18 GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=2 m=2
+XM7 net18 VGATE net21 GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=2 m=2
+XM8 net21 VGATE IDUMP GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=2 m=2
+XM9 IIN VGATE net1 GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM10 net3 VGATE net4 GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM11 net6 VGATE net7 GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM12 net9 VGATE net10 GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM13 net12 VGATE net13 GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM14 net15 VGATE net16 GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM15 net18 VGATE net19 GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM16 net1 D6 IOUT GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM17 net1 net2 IDUMP GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM18 net4 D5 IOUT GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM19 net4 net5 IDUMP GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM20 net7 D4 IOUT GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM21 net7 net8 IDUMP GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM22 net10 D3 IOUT GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM23 net10 net11 IDUMP GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM24 net13 D2 IOUT GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM25 net13 net14 IDUMP GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM26 net16 D1 IOUT GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM27 net16 net17 IDUMP GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM28 net19 D0 IOUT GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM29 net19 net20 IDUMP GND sky130_fd_pr__nfet_01v8 L=u_l W=u_w nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  inverter.sym # of pins=4
+** sym_path: /home/drew/documents/git/madvlsi/lib/digital/symbol/inverter.sym
+** sch_path: /home/drew/documents/git/madvlsi/lib/digital/schematic/inverter.sch
+.subckt inverter A Y VP VN
+*.iopin VP
+*.iopin VN
+*.ipin A
+*.opin Y
+XM1 Y A VN VN sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM2 Y A VP VP sky130_fd_pr__pfet_01v8 L=0.15 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.GLOBAL GND
+.GLOBAL VDD
+.end
