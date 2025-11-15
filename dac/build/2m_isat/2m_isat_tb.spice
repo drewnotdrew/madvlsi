@@ -1,0 +1,23 @@
+** sch_path: /home/drew/Documents/git/madvlsi/dac/schematic/2m_isat_tb.sch
+**.subckt 2m_isat_tb
+Vdd VDD GND 1.8
+Vgate Vgate GND 1.8
+Vout net1 GND 0
+.save i(vout)
+XM1 net1 Vgate VDD VDD sky130_fd_pr__pfet_01v8 L=12 W=4 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=2 m=2
+**** begin user architecture code
+.lib /usr/local/share/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
+
+.control
+  set wr_vecnames
+  set wr_singlescale
+  dc Vgate 0 1.8 0.01
+  wrdata ~/documents/git/madvlsi/dac/build/2m_isat/2m_isat_tb.txt i(Vout)
+.endc
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.GLOBAL VDD
+.end
