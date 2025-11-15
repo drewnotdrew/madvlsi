@@ -1,0 +1,30 @@
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+Flattening unmatched subcell bias_gen in circuit dac_schematic.spice (0)(1 instance)
+Flattening unmatched subcell current_divider in circuit dac_schematic.spice (0)(1 instance)
+Flattening unmatched subcell current_mirror in circuit dac_schematic.spice (0)(1 instance)
+Flattening unmatched subcell m2m_ladder in circuit dac_schematic.spice (0)(1 instance)
+Flattening unmatched subcell inverter in circuit dac_schematic.spice (0)(7 instances)
+
+Class dac_schematic.spice (0):  Merged 27 parallel devices.
+Class dac_layout.spice (1):  Merged 49 parallel devices.
+Subcircuit summary:
+Circuit 1: dac_schematic.spice             |Circuit 2: dac_layout.spice                
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8 (18->16)           |sky130_fd_pr__nfet_01v8 (18->16)           
+sky130_fd_pr__pfet_01v8 (115->68)          |sky130_fd_pr__pfet_01v8 (115->68)          
+Number of devices: 84                      |Number of devices: 84                      
+Number of nets: 53                         |Number of nets: 53                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+Cells have no pins;  pin matching not needed.
+Device classes dac_schematic.spice and dac_layout.spice are equivalent.
+
+Final result: Circuits match uniquely.
+.

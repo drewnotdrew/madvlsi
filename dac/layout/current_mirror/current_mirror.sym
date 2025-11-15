@@ -1,0 +1,39 @@
+v {xschem version=3.4.8RC file_version=1.3}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname u_w=@u_w u_l=@u_l m=@m r=@r"
+template="name=X1 u_w=3 u_l=3 m=2 r=1M"
+schematic="/home/drew/Documents/git/madvlsi/dac/layout/current_mirror/lvs_mirror_layout.sch"}
+V {}
+S {type=subcircuit
+format="@name @pinlist @symname"
+template="name=X1"}
+F {}
+E {}
+L 4 40 -50 70 -50 {}
+L 4 60 -50 60 -30 {}
+L 4 90 -110 90 -70 {}
+L 4 70 -50 80 -50 {}
+L 4 30 -50 40 -50 {}
+L 4 80 -50 90 -50 {}
+L 4 90 -70 90 -50 {}
+L 4 10 -110 30 -110 {}
+L 4 10 -70 30 -70 {}
+L 4 90 -90 110 -90 {}
+L 4 30 -130 30 -50 {}
+L 4 30 -130 90 -130 {}
+L 4 90 -130 90 -110 {}
+B 5 57.5 -32.5 62.5 -27.5 {name=VN
+dir=inout}
+B 5 7.5 -112.5 12.5 -107.5 {name=IIN
+dir=inout}
+B 5 7.5 -72.5 12.5 -67.5 {name=IB
+dir=inout}
+B 5 107.5 -92.5 112.5 -87.5 {name=IOUT
+dir=inout}
+T {@name} 75 -45 0 0 0.2 0.2 {}
+T {IB} 35 -80 0 0 0.3 0.3 {}
+T {@u_w\\/@u_l
+} 75 -30 0 0 0.2 0.2 {}
+T {IIN} 35 -120 0 0 0.3 0.3 {}
+T {IOUT} 50 -100 0 0 0.3 0.3 {}

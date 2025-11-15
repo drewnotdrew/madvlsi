@@ -1,0 +1,25 @@
+
+Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+
+Class bias_gen_layout.spice (0):  Merged 2 parallel devices.
+Class bias_gen_schematic.spice (1):  Merged 2 parallel devices.
+Subcircuit summary:
+Circuit 1: bias_gen_layout.spice           |Circuit 2: bias_gen_schematic.spice        
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__pfet_01v8 (4)                |sky130_fd_pr__pfet_01v8 (4)                
+sky130_fd_pr__nfet_01v8 (6->4)             |sky130_fd_pr__nfet_01v8 (6->4)             
+Number of devices: 8                       |Number of devices: 8                       
+Number of nets: 7                          |Number of nets: 7                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+Cells have no pins;  pin matching not needed.
+Device classes bias_gen_layout.spice and bias_gen_schematic.spice are equivalent.
+
+Final result: Circuits match uniquely.
+.

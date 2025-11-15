@@ -1,0 +1,12 @@
+* SPICE3 file created from bias_gen.ext - technology: sky130A
+
+X0 a_17900_29830# a_17900_29830# VP VP sky130_fd_pr__pfet_01v8 ad=16 pd=16 as=16 ps=16 w=4 l=12
+X1 VN a_15100_29900# a_17900_29830# VN sky130_fd_pr__nfet_01v8 ad=16 pd=16 as=16 ps=16 w=4 l=12
+X2 a_15100_29900# VBP VP VP sky130_fd_pr__pfet_01v8 ad=16 pd=16 as=16 ps=16 w=4 l=12
+X3 V a_15100_29900# a_15100_29900# VN sky130_fd_pr__nfet_01v8 ad=16 pd=16 as=16 ps=16 w=4 l=12
+X4 V a_15100_29900# a_15100_29900# VN sky130_fd_pr__nfet_01v8 ad=16 pd=16 as=16 ps=16 w=4 l=12
+X5 V a_15100_29900# a_15100_29900# VN sky130_fd_pr__nfet_01v8 ad=16 pd=16 as=16 ps=16 w=4 l=12
+X6 VBP a_17900_29830# VP VP sky130_fd_pr__pfet_01v8 ad=16 pd=16 as=16 ps=16 w=4 l=12
+X7 VN a_15100_31900# a_15100_31900# VN sky130_fd_pr__nfet_01v8 ad=16 pd=16 as=16 ps=16 w=4 l=12
+X8 VN a_15100_31900# VBP VN sky130_fd_pr__nfet_01v8 ad=16 pd=16 as=16 ps=16 w=4 l=12
+X9 a_15100_31900# VBP VP VP sky130_fd_pr__pfet_01v8 ad=16 pd=16 as=16 ps=16 w=4 l=12

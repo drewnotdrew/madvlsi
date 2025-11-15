@@ -1,0 +1,26 @@
+
+Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+
+Class current_divider_schematic.spice (0):  Merged 25 parallel devices.
+Class current_divider_layout.spice (1):  Merged 39 parallel devices.
+Subcircuit summary:
+Circuit 1: current_divider_schematic.spice |Circuit 2: current_divider_layout.spice    
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__pfet_01v8 (67->28)           |sky130_fd_pr__pfet_01v8 (67->28)           
+Number of devices: 28                      |Number of devices: 28                      
+Number of nets: 17                         |Number of nets: 17                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely with property errors.
+sky130_fd_pr__pfet_01v8:M54 vs. sky130_fd_pr__pfet_01v8:1:
+ W circuit1: "u_w"   circuit2: "4"   (exact match req'd)
+ L circuit1: "u_l"   circuit2: "12"   (exact match req'd)
+Cells have no pins;  pin matching not needed.
+Device classes current_divider_schematic.spice and current_divider_layout.spice are equivalent.
+
+Final result: Circuits match uniquely.
+Property errors were found.
+
+The following cells had property errors:
+ current_divider_schematic.spice

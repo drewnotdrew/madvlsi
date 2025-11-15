@@ -1,0 +1,7 @@
+* SPICE3 file created from current_mirror.ext - technology: sky130A
+
+X0 VN IB a_35500_32800# VN sky130_fd_pr__nfet_01v8 ad=16 pd=16 as=16 ps=12 w=4 l=12
+X1 a_35500_32800# IIN IOUT VN sky130_fd_pr__nfet_01v8 ad=16 pd=12 as=16 ps=16 w=4 l=12
+X2 VN IB a_35500_30000# VN sky130_fd_pr__nfet_01v8 ad=16 pd=16 as=16 ps=12 w=4 l=12
+X3 a_35500_30000# IIN IIN VN sky130_fd_pr__nfet_01v8 ad=16 pd=12 as=16 ps=16 w=4 l=12
+X4 a_35500_30000# IB IB VN sky130_fd_pr__nfet_01v8 ad=16 pd=16 as=16 ps=16 w=4 l=12
