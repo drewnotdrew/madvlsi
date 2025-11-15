@@ -1,0 +1,46 @@
+
+Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+Flattening unmatched subcell csrl in circuit csrl_rising_edge (1)(1 instance)
+Flattening unmatched subcell csrl_n in circuit csrl_rising_edge (1)(1 instance)
+
+Subcircuit summary:
+Circuit 1: csrl_rising_edge                |Circuit 2: csrl_rising_edge                
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8 (7)                |sky130_fd_pr__nfet_01v8 (7)                
+sky130_fd_pr__pfet_01v8 (7)                |sky130_fd_pr__pfet_01v8 (7)                
+Number of devices: 14                      |Number of devices: 14                      
+Number of nets: 12 **Mismatch**            |Number of nets: 11 **Mismatch**            
+---------------------------------------------------------------------------------------
+NET mismatches: Class fragments follow (with fanout counts):
+Circuit 1: csrl_rising_edge                |Circuit 2: csrl_rising_edge                
+
+---------------------------------------------------------------------------------------
+Net: a_220_n80#                            |Net: net1                                  
+  sky130_fd_pr__nfet_01v8/2 = 1            |  sky130_fd_pr__pfet_01v8/(1|3) = 2        
+  sky130_fd_pr__nfet_01v8/(1|3) = 2        |  sky130_fd_pr__nfet_01v8/(1|3) = 2        
+  sky130_fd_pr__pfet_01v8/2 = 1            |  sky130_fd_pr__pfet_01v8/2 = 1            
+  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8/2 = 1            
+                                           |                                           
+Net: a_220_230#                            |Net: net2                                  
+  sky130_fd_pr__nfet_01v8/(1|3) = 2        |  sky130_fd_pr__pfet_01v8/(1|3) = 2        
+  sky130_fd_pr__pfet_01v8/(1|3) = 2        |  sky130_fd_pr__nfet_01v8/(1|3) = 2        
+  sky130_fd_pr__nfet_01v8/2 = 1            |  sky130_fd_pr__pfet_01v8/2 = 1            
+  sky130_fd_pr__pfet_01v8/2 = 1            |  sky130_fd_pr__nfet_01v8/2 = 1            
+                                           |                                           
+Net: a_650_400#                            |(no matching net)                          
+  sky130_fd_pr__pfet_01v8/(1|3) = 1        |                                           
+---------------------------------------------------------------------------------------
+Netlists do not match.
+Port matching may fail to disambiguate symmetries.
+  Flattening non-matched subcircuits csrl_rising_edge csrl_rising_edge
+
+Equate elements:  no current cell.
+Device classes shift_register_x4_rising.spice and shift_register_x4_rising_xschem.spice are equivalent.
+
+Final result: Top level cell failed pin matching.
